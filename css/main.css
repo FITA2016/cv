@@ -1,0 +1,321 @@
+/*预定义样式*/ 
+*{
+	margin: 0;
+	padding:0;
+	font-family: "微软雅黑"
+}
+a{	display: inline-block;
+	text-decoration: none;
+	border:none;
+	color: #fff;
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	color:rgba(255,255,255,0.9);
+	font-size: 1.5rem;
+	font-weight: normal;
+	opacity: 0.9;
+}
+h3{
+	color:rgba(255,255,255,0.8);
+	font-size: 1.2rem;
+	font-weight: normal;
+	opacity: 0.8;
+}
+p{
+	color:rgba(255,255,255,0.8);
+	font-size: 1rem;
+}
+.lang{
+	display: inline-block;
+	width: 50px;
+	height:30px;
+	line-height: 30px;
+	font-size:1.2rem;
+	text-align: center;
+	transition: .5s;
+	background: rgba(255,255,255,0.8);
+}
+.lang:hover{
+	opacity: 0.8;
+}
+.lang a{
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	color:#666;
+}
+.selected{
+	background:#fff;
+}
+.selected a{
+	color:#333;
+}
+#lang-panel{
+	border-radius: 5px;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+/*所有屏幕通用样式*/
+.section { 
+	overflow: hidden;                      /*设置超出内容隐藏，防止出现水平滚动条*/
+	text-align: center; 
+	font: 2rem "Microsoft Yahei"; 
+	color: #fff;
+}
+
+/*首屏样式*/
+.section1 .avatar{
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:8px solid rgba(255,245,245,0.4);
+	opacity: 0;
+	transition:1s ease;
+	position: relative;
+	perspective: 500;
+	transform: rotateY(300deg);
+	transform: rotateX(300deg);
+	top: -900px;
+}
+.section1.active .avatar{
+	transform: rotateY(0deg);
+	transform: rotateX(0deg);
+	top:0;
+	opacity: 1;
+}
+.section1 h1, .section1 h2, .section1 p{
+	transform: scale(0.1);
+	transition-duration: .4s;
+}
+.section1 h1{
+	transition-delay: .1s;
+}
+.section1 h2{
+	transition-delay: .3s;
+}
+.section1 p{
+	transition-delay: .6s;
+}
+.section1.active h1,.section1.active h2, .section1.active p{
+	transform: scale(1);
+}
+
+/*第二屏样式*/
+.section2 h1{
+	margin: 0 auto 10px;
+	perspective: 500;
+	transform: rotateY(300deg);
+	transform: rotateX(300deg);
+	top: -900px;
+	transition:1s ease;
+}
+.section2.active h1{
+	transform: rotateY(0deg);
+	transform: rotateX(0deg);
+	top:0;
+	opacity: 1;
+}
+.section2 .item{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+	height:300px;
+}
+.section2 .item li{
+	width:260px;
+	height:300px;
+	float: left;
+	margin:0 20px;
+	overflow: hidden;
+	box-shadow: 4px 4px 4px #555;
+	transition:1s ease;
+}
+.section2 .item li:nth-child(1){
+	transform: rotateY(-180deg);
+}
+.section2.active .item li:nth-child(1){
+	transform: rotateY(0deg);
+}
+.section2 .item li:nth-child(2){
+	transform: rotateX(180deg);
+}
+.section2.active .item li:nth-child(2){
+	transform: rotateX(0deg);
+}
+.section2 .item li:nth-child(2) img{
+	position: relative;
+	top:0;
+}
+
+.section2 .item li:nth-child(3){
+	transform: rotateY(180deg);
+}
+.section2.active .item li:nth-child(3){
+	transform: rotateY(0deg);
+}
+
+/*第三屏样式*/
+.section3 h1{
+	margin-bottom: 40px;
+	transition: 2s;
+	transform: scale(0);
+}
+.section3.active h1{
+	margin-bottom: 40px;
+	transform: scale(1);
+}
+.section3 .tag-panel{
+	margin-bottom: 30px;
+	transition: 2s;
+	transform: scale(0);
+}
+.section3.active .tag-panel{
+	transform: scale(1);
+}
+.section3 .tag-panel span{
+	padding:6px;
+	border-radius: 6px;
+	background: rgba(0,0,0,0.5);
+	margin:0px 10px;
+}
+
+/*第四屏样式*/
+.section4 .work{
+	line-height: 2rem;
+	width: 600px;
+	margin: 0 auto;
+	transition: 2s;
+	opacity: 0;
+}
+.section4.active .work{
+	opacity: 1;
+}
+.section4 .work h1{
+	margin-bottom: 20px;
+}
+/*第五屏样式*/
+.section5 img, .section5 h1{
+	margin-bottom: 40px;
+	transition: 2s;
+}
+.section5 h1{
+	transform: scale(0);
+}
+.section5.active h1{
+	transform: scale(1);
+}
+.section5 .outdoor img:nth-child(1){
+	position: relative;
+	left: -400px;
+	transform: rotateZ(-180deg);
+}
+.section5.active .outdoor img:nth-child(1){
+	transform: rotateZ(0deg);
+	left: 0;
+}
+.section5 .outdoor img:nth-child(2){
+	position: relative;
+	left: 400px;
+	transform: rotateZ(180deg);
+}
+.section5.active .outdoor img:nth-child(2){
+	transform: rotateZ(0deg);
+	left: 0;
+}
+.section5 .indoor img:nth-child(1){
+	position: relative;
+	left: -400px;
+	transform: rotateZ(-180deg);
+}
+.section5.active .indoor img:nth-child(1){
+	transform: rotateZ(0deg);
+	left: 0;
+}
+.section5 .indoor img:nth-child(2){
+	transform: scale(0);
+}
+.section5.active .indoor img:nth-child(2){
+	transform: scale(1);
+}
+.section5 .indoor img:nth-child(3){
+	position: relative;
+	left: 400px;
+	transform: rotateZ(180deg);
+}
+.section5.active .indoor img:nth-child(3){
+	transform: rotateZ(0deg);
+	left: 0;
+}
+
+
+/*第六屏样式*/
+.section6 h1{
+	transition: 2s;
+	margin-bottom: 20px;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active h1{
+	opacity: 1;
+	top:0px;
+}
+}
+.section6 p{
+	transition: 2s;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active p{
+	opacity: 1;
+	top:0px;
+}
+.section6 a{
+	display: inline-block;
+	font-size: 1.4rem;
+	transition: 2s;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6 a:nth-child(3){
+	font-size: 1.8rem;
+}
+.section6.active a{
+	opacity: 1;
+	top:0px;
+}
+.section6 a::after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	transition: .5s;
+	transform: scaleX(0);
+}
+.section6 a:hover::after{
+	transform: scaleX(1);
+} 
+.section6 span{
+	transition: 2s;
+	position: relative;
+	opacity: 0;
+	top:-200px;
+}
+.section6.active span{
+	opacity: 1;
+	top:0px;
+}

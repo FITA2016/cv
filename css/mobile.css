@@ -1,0 +1,146 @@
+/*预定义样式*/ 
+*{
+	margin: 0;
+	padding:0;
+	font-family: "微软雅黑"
+}
+html,body{
+	overflow-x:hidden; 
+}
+
+a{	display: inline-block;
+	text-decoration: none;
+	border:none;
+	color: #fff;
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	color:rgba(255,255,255,0.9);
+	font-size: 1.5rem;
+	font-weight: normal;
+	opacity: 0.9;
+}
+h3{
+	color:rgba(255,255,255,0.8);
+	font-size: 1.2rem;
+	font-weight: normal;
+	opacity: 0.8;
+}
+p{
+	color:rgba(255,255,255,0.8);
+	font-size: 1rem;
+}
+.lang{
+	transform: scale(0.8);
+	display: inline-block;
+	width: 50px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	transition: .5s;
+	background: rgba(255,255,255,0.8);
+	margin-right: -10px;
+}
+.lang:hover{
+	opacity: 0.8;
+}
+.lang a{
+	display: inline-block;
+	font-size:1.2rem;
+	width: 50px;
+	height: 30px;
+	color:#666;
+}
+.selected{
+	background:#fff;
+}
+.selected a{
+	color:#333;
+}
+#lang-panel{
+	border-radius: 5px;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+/*所有屏幕通用样式*/
+.section { 
+	overflow: hidden;                      /*设置超出内容隐藏，防止出现水平滚动条*/
+	text-align: center; 
+	font: 2rem "Microsoft Yahei"; 
+	color: #fff;
+}
+
+/*首屏样式*/
+.section1 .avatar{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:8px solid rgba(255,245,245,0.4);
+}
+
+/*第二屏样式*/
+.section2 h1{
+	position: relative;
+	margin-bottom: 8px;
+}
+.section2 .item{
+	margin: 0 auto;
+	width:100%;
+}
+.section2 .item li{
+	width:260px;
+	height:300px;
+	margin: 0 auto 10px;
+	overflow: hidden;
+	box-shadow: 4px 4px 4px #555;
+}
+
+
+/*第三屏样式*/
+.section3 h1{
+	margin-bottom: 10px;
+}
+.section3 .tag-panel{
+	margin-bottom: 4px;
+}
+.section3 .tag-panel span{
+	display: inline-block;
+	padding:0 10px;
+	border-radius: 4px;
+	background: rgba(0,0,0,0.5);
+	margin:4px 10px;
+}
+
+/*第四屏样式*/
+.section4 .work{
+	line-height: 2rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section4 .work h1{
+	margin-bottom: 20px;
+}
+/*第五屏样式*/
+.section5 img, .section5 h1{
+	margin-bottom: 40px;
+}
+
+/*第六屏样式*/
+.section6 h1{
+	margin-bottom: 20px;
+}
+
+.section6 a{
+	display: inline-block;
+	font-size: 1rem;
+}
+.section6 a:nth-child(3){
+	font-size: 1.8rem;
+}
